@@ -1,4 +1,4 @@
-🚀 Novanest – The Ultimate Platform for Entrepreneurs, Mentors & Investors
+**🚀 Novanest – The Ultimate Platform for Entrepreneurs, Mentors & Investors
 🌟 Empowering Startups, Connecting Innovators
 🛑 Problem Statement
 Entrepreneurs face major hurdles when launching their startups:
@@ -138,7 +138,7 @@ Submit a Pull Request
 
 📞 Contact & Support
 
-For queries or support, contact us at r.nandakishore24@gmail.com
+For queries or support, contact us at giripradeep0410@gmail.com
 
 🚀 Join Novanest & Build the Future of Startups!
 
