@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-base text-gray-100 bg-background;
+  }
+  h1 {
+    @apply font-display font-bold text-4xl md:text-5xl mb-6;
+  }
+  h2 {
+    @apply font-display font-bold text-3xl md:text-4xl mb-4;
+  }
+  h3 {
+    @apply font-display font-semibold text-2xl md:text-3xl mb-3;
+  }
+  h4 {
+    @apply font-display font-semibold text-xl md:text-2xl mb-2;
+  }
+  a {
+    @apply text-accent hover:text-accent-light transition duration-200;
+  }
+}
+
+@layer components {
+  /* Card Components */
+  .card {
+    @apply bg-background-card rounded-lg shadow-md p-6;
+  }
+  
+  .card-hover {
+    @apply transform transition duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs rounded-md;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-base rounded-lg;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent text-white hover:bg-accent-dark focus:ring-accent;
+  }
+  
+  .btn-outline-primary {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+  
+  .btn-outline-secondary {
+    @apply btn border-2 border-secondary text-secondary hover:bg-secondary hover:text-white focus:ring-secondary;
+  }
+  
+  .btn-outline-accent {
+    @apply btn border-2 border-accent text-accent hover:bg-accent hover:text-white focus:ring-accent;
+  }
+  
+  .btn-ghost {
+    @apply btn text-gray-300 hover:bg-gray-700 hover:text-white focus:ring-gray-500;
+  }
+  
+  .btn {
+    @apply bg-white border border-black rounded-full px-5 py-2.5 shadow text-center text-base text-black cursor-pointer hover:bg-gray-100;
+  }
+  
+  /* Form Components */
+  .form-input {
+    @apply block w-full px-3 py-2 border border-gray-600 rounded-md bg-background-light text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-300 mb-1;
+  }
+  
+  .form-select {
+    @apply block w-full px-3 py-2 border border-gray-600 rounded-md bg-background-light text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+  }
+  
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply badge bg-primary-dark text-white;
+  }
+  
+  .badge-secondary {
+    @apply badge bg-secondary-dark text-white;
+  }
+  
+  .badge-accent {
+    @apply badge bg-accent-dark text-white;
+  }
+  
+  /* Navigation Components */
+  .nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700;
+  }
+  
+  .nav-link-active {
+    @apply px-3 py-2 rounded-md text-sm font-medium text-white bg-primary;
+  }
+  
+  /* Animation Utilities */
+  .animated-gradient-bg {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-size-200 animate-gradient;
+  }
+  
+  /* Custom Container */
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Headless UI Components */
+  
+  /* Dialog/Modal */
+  .headless-dialog-overlay {
+    @apply fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity;
+  }
+  
+  .headless-dialog-panel {
+    @apply relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full;
+  }
+  
+  .headless-dialog-title {
+    @apply text-lg font-medium leading-6 text-gray-900 p-6 border-b border-gray-200;
+  }
+  
+  .headless-dialog-description {
+    @apply text-sm text-gray-500;
+  }
+  
+  .headless-dialog-content {
+    @apply p-6;
+  }
+  
+  .headless-dialog-footer {
+    @apply bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse;
+  }
+  
+  /* Dropdown/Menu */
+  .headless-menu-button {
+    @apply inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  }
+  
+  .headless-menu-items {
+    @apply absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none;
+  }
+  
+  .headless-menu-item {
+    @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900;
+  }
+  
+  /* Tabs */
+  .headless-tabs-list {
+    @apply flex space-x-1 border-b border-gray-200;
+  }
+  
+  .headless-tab {
+    @apply px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-t-lg;
+  }
+  
+  .headless-tab-active {
+    @apply text-blue-600 bg-white border-b-2 border-blue-500;
+  }
+  
+  .headless-tab-panel {
+    @apply p-6;
+  }
+  
+  /* Combobox (Autocomplete) */
+  .headless-combobox-input {
+    @apply w-full rounded-md border border-gray-300 py-2 pl-3 pr-10 shadow-sm text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500;
+  }
+  
+  .headless-combobox-options {
+    @apply absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+  }
+  
+  .headless-combobox-option {
+    @apply relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 hover:bg-blue-100;
+  }
+  
+  /* Switch */
+  .headless-switch {
+    @apply relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .headless-switch-enabled {
+    @apply bg-blue-600;
+  }
+  
+  .headless-switch-disabled {
+    @apply bg-gray-200;
+  }
+  
+  .headless-switch-knob {
+    @apply pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .bg-size-200 {
+    background-size: 200% 200%;
+  }
+}
+
+/* Animations and Effects */
+.glassmorphism {
+  @apply bg-opacity-10 backdrop-filter backdrop-blur-lg;
+}
+
+/* Dark mode enhancements */
+.dark-card {
+  @apply bg-opacity-40 border border-gray-700;
+}

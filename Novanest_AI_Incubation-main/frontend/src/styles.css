@@ -1,0 +1,148 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+  background-size: 800% 800%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+  overflow: hidden; /* Ensure floating elements stay within bounds */
+}
+
+/* Add a frosted glass effect */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
+  animation: slideIn 0.5s ease forwards; /* Animate form entrance */
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #3b82f6; /* Blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue-500 with transparency */
+  animation: pulse 0.5s ease; /* Pulse effect on focus */
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6; /* Blue-500 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb; /* Darker blue */
+  transform: translateY(-2px) scale(1.05); /* Lift and scale effect on hover */
+}
+
+button:active {
+  transform: translateY(0) scale(1); /* Reset lift effect on click */
+}
+
+/* Floating elements */
+.floating {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-1 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-2 {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 30%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.floating-3 {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 20%;
+  left: 30%;
+  animation-delay: 2s;
+}

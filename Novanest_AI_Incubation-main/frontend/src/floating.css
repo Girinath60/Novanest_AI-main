@@ -1,0 +1,46 @@
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.7; /* Slightly transparent for a softer look */
+}
+
+.floating-1 {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.floating-2 {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.floating-3 {
+  position: absolute;
+  bottom: 15%;
+  left: 25%;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
