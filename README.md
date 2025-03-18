@@ -1,4 +1,4 @@
-**🚀 Novanest – The Ultimate Platform for Entrepreneurs, Mentors & Investors
+🚀 Novanest – The Ultimate Platform for Entrepreneurs, Mentors & Investors
 🌟 Empowering Startups, Connecting Innovators
 🛑 Problem Statement
 Entrepreneurs face major hurdles when launching their startups:
